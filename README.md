@@ -19,5 +19,5 @@ Here are some ideas to get you started:
 <a rel="me" href="https://fosstodon.org/@pkking">Mastodon</a>
 
 ## discord
-![](https://dcbadge.limes.pink/api/shield/lcr1221)
+![](https://dcbadge.limes.pink/api/shield/1072349424061255690)
 
