@@ -17,3 +17,7 @@ Here are some ideas to get you started:
 
 ### Get in touch
 <a rel="me" href="https://fosstodon.org/@pkking">Mastodon</a>
+
+## discord
+![](https://dcbadge.limes.pink/api/shield/lcr1221)
+
