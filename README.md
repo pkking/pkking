@@ -1,4 +1,4 @@
-### Hi there 👋
+## Hi there 👋
 
 <!--
 **pkking/pkking** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-### Get in touch
+## Get in touch
 <a rel="me" href="https://fosstodon.org/@pkking">Mastodon</a>
 
 ## discord
