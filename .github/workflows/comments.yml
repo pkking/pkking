@@ -27,7 +27,7 @@ jobs:
           ls
           years=$(awk -F '|' '/^[|] *[0-9]{4}/ {gsub(/ /, "", $2); print $2}' "README.md")
           for year in $years; do
-              # note: the PAT is a classic personal token with permission: repo read/write
+              # note: the PAT is a classic personal token with permission: repo read/write and user read
               GITHUB_COUNT=$(python github_stats.py "${{ secrets.PAT }}" $year)
               GITEE_COUNT=$(python gitee_stats.py "${{ secrets.GITEE_TOKEN }}" $year)
               sed -i -E "s/($year\|)[^|]*(\|)[^|]*(\|)/\1 ${GITHUB_COUNT} \2 ${GITEE_COUNT} \3/" README.md
