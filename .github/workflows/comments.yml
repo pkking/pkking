@@ -1,0 +1,35 @@
+name: Update PR Comments Stats
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs at 00:00 UTC every day
+  workflow_dispatch:      # Allows manual trigger
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: ${{ github.actor }}/${{ github.actor }}
+          token: ${{ secrets.GITHUB_TOKEN	}}
+
+      - name: Set up Python
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13' 
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Get comments
+        run: |
+          years=$(awk -F '|' '/^[|] *[0-9]{4}/ {gsub(/ /, "", $2); print $2}' "README.md")
+          for year in $years; do
+              GITHUB_COUNT=$(python github_stats.py "${{ secrets.GITHUB_TOKEN }}" $year)
+              GITEE_COUNT=$(python gitee_stats.py "${{ secrets.GITEE_TOKEN }}" $year)
+              sed -i -E "s/($year\|)[^|]*(\|)[^|]*(\|)/\1 ${GITHUB_COUNT} \2 ${GITEE_COUNT} \3/" README.md
+          done
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update PR comments stats" && git push)
