@@ -29,7 +29,7 @@ jobs:
               GITEE_COUNT=$(python gitee_stats.py "${{ secrets.GITEE_TOKEN }}" $year)
               sed -i -E "s/($year\|)[^|]*(\|)[^|]*(\|)/\1 ${GITHUB_COUNT} \2 ${GITEE_COUNT} \3/" README.md
           done
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'li chaoran'
+          git config --global user.email 'pkking@users.noreply.github.com'
           git add README.md
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update PR comments stats" && git push)
