@@ -8,7 +8,7 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: ${{ github.actor }}/${{ github.actor }}
           token: ${{ secrets.GITHUB_TOKEN	}}
@@ -21,8 +21,10 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Get comments
+      - name: Updates comments
         run: |
+          set -x
+          ls
           years=$(awk -F '|' '/^[|] *[0-9]{4}/ {gsub(/ /, "", $2); print $2}' "README.md")
           for year in $years; do
               GITHUB_COUNT=$(python github_stats.py "${{ secrets.GITHUB_TOKEN }}" $year)
