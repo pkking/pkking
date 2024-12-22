@@ -28,5 +28,5 @@ Here are some ideas to get you started:
 count by scripts for [gitee](https://github.com/pkking/pkking/blob/main/gitee_stats.py) and [github](https://github.com/pkking/pkking/blob/main/github_stats.py)
 | year| github PR review counts| gitee PR review counts |
 | -- | -- | -- |
-|2023| 69 | 101 |
-|2024| 191 | 132 |
+|2023| 109 | 101 |
+|2024| 574 | 132 |
