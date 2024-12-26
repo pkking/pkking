@@ -1,7 +1,7 @@
 name: Update PR Comments Stats
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at 00:00 UTC every day
+    - cron: '55 23 * * *'  # Runs at 00:00 UTC every day
   workflow_dispatch:      # Allows manual trigger
 
 jobs:
