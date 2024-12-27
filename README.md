@@ -29,5 +29,5 @@ count by scripts for [gitee](https://github.com/pkking/pkking/blob/main/gitee_st
 | year| github PR review counts| gitee PR review counts |
 | -- | -- | -- |
 |2023| 109 | 101 |
-|2024| 574 | 132 |
+|2024| 574 | 138 |
 |2025|||
