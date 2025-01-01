@@ -30,4 +30,4 @@ count by scripts for [gitee](https://github.com/pkking/pkking/blob/main/gitee_st
 | -- | -- | -- |
 |2023| 109 | 101 |
 |2024| 574 | 141 |
-|2025|||
+|2025| 0 | 0 |
