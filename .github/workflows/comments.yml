@@ -1,34 +1,32 @@
-name: Update PR Comments Stats
-on:
+name: Metrics
+'on':
+  push:
+    branches:
+      - main
   schedule:
-    - cron: '55 23 * * *'  # Runs at 00:00 UTC every day
-  workflow_dispatch:      # Allows manual trigger
+    - cron: 0 0 * * *
+  workflow_dispatch:
 
 jobs:
-  update-readme:
+  metrics:
+    name: Metrics
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: GitHub metrics SVG image
+        uses: lowlighter/metrics@latest
         with:
-          repository: ${{ github.actor }}/${{ github.actor }}
-          token: ${{ secrets.PAT }}
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Updates comments
-        run: |
-          year=$(date +%Y)
-          # note: the PAT is a classic personal token with permission: repo read/write and user read
-          GITHUB_COUNT=$(python github_stats.py "${{ secrets.PAT }}" $year)
-          GITEE_COUNT=$(python gitee_stats.py "${{ secrets.GITEE_TOKEN }}" $year)
-          sed -i -E "s/($year\|)[^|]*(\|)[^|]*(\|)/\1 ${GITHUB_COUNT} \2 ${GITEE_COUNT} \3/" README.md
-          git config --global user.name 'li chaoran'
-          git config --global user.email 'pkking@users.noreply.github.com'
-          git add README.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update PR comments stats" && git push)
+          token: ${{ secrets.METRICS_TOKEN }}
+          config_timezone: Brisbane/Australia
+          plugin_achievements: 'no'
+          plugin_achievements_limit: 0
+          plugin_achievements_secrets: 'no'
+          plugin_activity: 'no'
+          plugin_followup: 'yes'
+          plugin_followup_sections: repositories, user
+          plugin_languages: 'yes'
+          plugin_languages_details: bytes-size, percentage, lines
+          plugin_languages_indepth: 'yes'
+          plugin_notable: 'no'
+          plugin_notable_filter: stars:>1000
+          plugin_notable_repositories: 'yes'
+          plugin_stargazers: 'no'
