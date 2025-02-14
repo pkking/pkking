@@ -22,4 +22,4 @@ Here are some ideas to get you started:
 ![](https://dcbadge.limes.pink/api/shield/1072349424061255690)
 
 ## Stats
-![Metrics](https://github.com/askb/askb/blob/main/github-metrics.svg)
+![Metrics](https://github.com/pkking/pkking/blob/main/github-metrics.svg)
