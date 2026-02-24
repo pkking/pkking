@@ -20,7 +20,7 @@ jobs:
         uses: gh-metrics/metrics@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          onfig_timezone: 'Asia/Shanghai'
+          config_timezone: 'Asia/Shanghai'
           plugin_lines: 'yes'
           #plugin_activity: 'yes'
           plugin_followup: 'no'
