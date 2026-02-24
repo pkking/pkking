@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: GitHub metrics SVG image
-        uses: lowlighter/metrics@latest
+        uses: gh-metrics/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config_timezone: 'Asia/Shanghai'
