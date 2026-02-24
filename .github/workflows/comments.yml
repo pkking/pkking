@@ -17,7 +17,7 @@ jobs:
       contents: write
     steps:
       - name: GitHub metrics SVG image
-        uses: gh-metrics/metrics@latest
+        uses: gh-metrics/metrics@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           #onfig_timezone: 'Asia/Shanghai'
