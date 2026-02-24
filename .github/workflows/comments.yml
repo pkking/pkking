@@ -11,20 +11,24 @@ jobs:
   metrics:
     name: Metrics
     runs-on: ubuntu-latest
+    environment: 
+      name: production
+    permissions:
+      contents: write
     steps:
       - name: GitHub metrics SVG image
         uses: gh-metrics/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          config_timezone: 'Asia/Shanghai'
-          plugin_lines: 'yes'
-          plugin_activity: 'yes'
-          plugin_followup: 'no'
-          plugin_followup_sections: repositories, user
-          plugin_languages: 'yes'
-          plugin_languages_details: bytes-size, percentage, lines
-          plugin_languages_indepth: 'yes'
-          plugin_notable: 'yes'
-          plugin_notable_filter: stars:>1000
+          #onfig_timezone: 'Asia/Shanghai'
+          #plugin_lines: 'yes'
+          #plugin_activity: 'yes'
+          #plugin_followup: 'no'
+          #plugin_followup_sections: repositories, user
+          #plugin_languages: 'yes'
+          #plugin_languages_details: bytes-size, percentage, lines
+          #plugin_languages_indepth: 'yes'
+          #plugin_notable: 'yes'
+          #plugin_notable_filter: stars:>1000
           plugin_notable_repositories: 'yes'
           plugin_stargazers: 'yes'
