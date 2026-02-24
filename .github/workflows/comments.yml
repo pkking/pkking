@@ -22,7 +22,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           onfig_timezone: 'Asia/Shanghai'
           plugin_lines: 'yes'
-          plugin_activity: 'yes'
+          #plugin_activity: 'yes'
           plugin_followup: 'no'
           plugin_followup_sections: repositories, user
           plugin_languages: 'yes'
