@@ -22,4 +22,12 @@ Here are some ideas to get you started:
 ![](https://dcbadge.limes.pink/api/shield/1072349424061255690)
 
 ## Stats
-![Metrics](https://github.com/pkking/pkking/blob/main/github-metrics.svg)
+![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=pkking&theme=gruvbox)
+
+![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=pkking&theme=gruvbox)
+
+![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=pkking&theme=gruvbox)
+
+![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=pkking&theme=gruvbox)
+
+![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=pkking&theme=gruvbox&utcOffset=8)
